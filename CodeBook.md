@@ -590,7 +590,7 @@ In the process of tidying the data, the original variables (also called feature 
 
 ## Tidy Data
 
-The data is saved in TidyGroupedDataSet.txt and contains the following variables and possible values:
+The result of the R script is tidy data. The data is saved in TidyGroupedDataSet.txt and contains the following variables and possible values. Mind that units are missing in the original data files. Consequently all numeric values are without unit.
 
 | variable | value(s) |
 | -------- | ----- |
