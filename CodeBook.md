@@ -1,14 +1,14 @@
 # Code Book
 ## Original data
 The original data is available in the following original files:
-      *  Trainingset extracted from "./UCI HAR Dataset/train/X_train.txt"
-      *  Trainingset corresponding activities extracted from "./UCI HAR Dataset/train/y_train.txt"
-      *  Trainingset corresponding subjects extracted from "./UCI HAR Dataset/train/subject_train.txt"
-      *  Testset extracted from "./UCI HAR Dataset/test/X_test.txt"
-      *  Testset corresponding activities extracted from "./UCI HAR Dataset/test/y_test.txt"
-      *  Testset corresponding subjects extracted from "./UCI HAR Dataset/test/subject_test.txt"
-      *  Feature labels (variables) extracted from "UCI HAR Dataset/features.txt"
-      *  Activity labels (variables) extracted from "./UCI HAR Dataset/activity_labels.txt"
+*  Trainingset extracted from "./UCI HAR Dataset/train/X_train.txt"
+*  Trainingset corresponding activities extracted from "./UCI HAR Dataset/train/y_train.txt"
+*  Trainingset corresponding subjects extracted from "./UCI HAR Dataset/train/subject_train.txt"
+*  Testset extracted from "./UCI HAR Dataset/test/X_test.txt"
+*  Testset corresponding activities extracted from "./UCI HAR Dataset/test/y_test.txt"
+*  Testset corresponding subjects extracted from "./UCI HAR Dataset/test/subject_test.txt"
+*  Feature labels (variables) extracted from "UCI HAR Dataset/features.txt"
+*  Activity labels (variables) extracted from "./UCI HAR Dataset/activity_labels.txt"
 
 ## Tidiness of the original data
 The original data is scattered over different files and not published in one concised data set. The variable names are not self-explaining and sometimes very cryptic. The names also contain superfluous characters. There are duplicated variable names.
@@ -16,7 +16,7 @@ The original data is scattered over different files and not published in one con
 ## Variables and descriptions
 Since this project deals with data that has been processed by others, the original data can only be validated according the original background information. The background information was mainly provided in the original "UCI\ HAR\ Dataset/README.txt" and "UCI\ HAR\ Dataset/features_info.txt" files. The files inform about the quantities, that have been measured or calculated. Please check the files for information concerning the data. The information will not be copied here. Unfortunately the information in these files does not provide any insight in the used units of measured or calculated values. So there is no information given about the units of the quantities, only the values are provided. This is of importance to the provided data of this project. Without the information of the units of the original values, no units can be provided for the new data either.
 
-### Activity and SubjectID
+### Activity, SubjectID, GroupedByActivity, and GroupedBySubjectID
 Activity labels can be extracted from the "./UCI HAR Dataset/activity_labels.txt" file. The first column contains the activity identification number. The second column contains the corresponding description. The variables are named ActivityID and Activity. 
 Identification numbers of test persons (called subjects) can be extracted from the "./UCI HAR Dataset/test/subject_test.txt" and "./UCI HAR Dataset/train/subject_train.txt" files. The variables are labeled with SubjectID by the R script. The data correspond to the test- and trainings set of data, respectively. It is assumed that the order of the rows in the different files is equal. Consequently, a relatively easy column bind procedure is suitable to combine the data in a meaningful manner.
 At the end of the data processing by the ``run_analysis.R`` script, the original mean values and standard deviation values will be summarized. The data will be grouped by activity and test person (subject). The grouped variables will be denoted as GroupedByActivity and GroupedBySubjectID, respectively. There are 6 activities and 30 test persons (called subjects). Assuming that all activities will be recorded for all test persons, 180 records can be expected as a result of the summarization. The mean of all mean values and the mean of all standard deviations will be calculated for each activity and each test person. The mean values are saved as MeanOf... values. An example is MeanOfFrequencyBodyGyroscopeMeanZ, which is the mean of FrequencyBodyGyroscopeMeanZ per Activity and per SubjectID. The value of FrequencyBodyGyroscopeMeanZ stems from the original "fBodyGyro-mean()-Z" value. The other MeanOf... values are obtained in a similarly logical way. See the paragraph Tidy Data for all variables.

@@ -3,7 +3,7 @@
 Accelerometers and gyroscopes, build into mobile devices, such as smart phones, produce signals. These signals can be interpreted as movement of the device itself, but consequently also as the movement of the body, both human and machine, wearing the device. Accelerometers and gyroscopes and sometimes magnetometers are incorporated into inertial measurement units. These units can be used to collect Human Activity data. Such data was provided and was downloaded. The data has been gathered from the recordings of 30 subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors. The data stemmed from signals from the inertial sensors from the Samsung Galaxy S smartphone. A full description of the data is available at this [site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 ## Motivation
-The data, as obtained, was not in a tidy state. Moreover corresponding data was distributed over several files. The included R script enables to tidy up the data and to bring corresponding data into one data table. For information concerning the original variables, the original README.txt and features_info.txt files should be consulted.
+The data, as obtained, was not in a tidy state. Moreover corresponding data was distributed over several files. The included R script enables to tidy up the data and to bring corresponding data into one data table. For information concerning the original variables, the original ``README.txt`` and ``features_info.txt`` files should be consulted.
 
 ## Description
 The following files comprise this project:
