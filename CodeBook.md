@@ -25,8 +25,8 @@ At the end of the data processing by the ``run_analysis.R`` script, the original
 In the process of tidying the data, the original variables (also called feature labels or short features) have been transformed to better readable and more descriptive variables. The following list gives the original feature labels (first column) and new feature labels (second column).
 
 | Original feature label   | New feature label |
-| ------------------------ |:-----------------:|
-|tBodyAcc-mean()-X         | TimeBodyAccelerometerMeanX|
+| ------------------------ | ----------------- |
+|tBodyAcc-mean()-X|TimeBodyAccelerometerMeanX|
 |tBodyAcc-mean()-Y|TimeBodyAccelerometerMeanY|
 |tBodyAcc-mean()-Z|TimeBodyAccelerometerMeanZ|
 |tBodyAcc-std()-X|TimeBodyAccelerometerStandardDeviationX|
@@ -590,93 +590,95 @@ In the process of tidying the data, the original variables (also called feature 
 
 ## Tidy Data
 
-The data is saved in TidyGroupedDataSet.txt and contains the following variables:
+The data is saved in TidyGroupedDataSet.txt and contains the following variables and possible values:
 
-"GroupedByActivity" 	[WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING]	
-"GroupedBySubjectID"    [1,2,3,4,...,30]
-"MeanOfTimeBodyAccelerometerMeanX"
-"MeanOfTimeBodyAccelerometerMeanY"
-"MeanOfTimeBodyAccelerometerMeanZ"
-"MeanOfTimeBodyAccelerometerStandardDeviationX"
-"MeanOfTimeBodyAccelerometerStandardDeviationY"
-"MeanOfTimeBodyAccelerometerStandardDeviationZ"
-"MeanOfTimeGravityAccelerometerMeanX"
-"MeanOfTimeGravityAccelerometerMeanY"
-"MeanOfTimeGravityAccelerometerMeanZ"
-"MeanOfTimeGravityAccelerometerStandardDeviationX"
-"MeanOfTimeGravityAccelerometerStandardDeviationY"
-"MeanOfTimeGravityAccelerometerStandardDeviationZ"
-"MeanOfTimeBodyAccelerometerJerkMeanX"
-"MeanOfTimeBodyAccelerometerJerkMeanY"
-"MeanOfTimeBodyAccelerometerJerkMeanZ"
-"MeanOfTimeBodyAccelerometerJerkStandardDeviationX"
-"MeanOfTimeBodyAccelerometerJerkStandardDeviationY"
-"MeanOfTimeBodyAccelerometerJerkStandardDeviationZ"
-"MeanOfTimeBodyGyroscopeMeanX"
-"MeanOfTimeBodyGyroscopeMeanY"
-"MeanOfTimeBodyGyroscopeMeanZ"
-"MeanOfTimeBodyGyroscopeStandardDeviationX"
-"MeanOfTimeBodyGyroscopeStandardDeviationY"
-"MeanOfTimeBodyGyroscopeStandardDeviationZ"
-"MeanOfTimeBodyGyroscopeJerkMeanX"
-"MeanOfTimeBodyGyroscopeJerkMeanY"
-"MeanOfTimeBodyGyroscopeJerkMeanZ"
-"MeanOfTimeBodyGyroscopeJerkStandardDeviationX"
-"MeanOfTimeBodyGyroscopeJerkStandardDeviationY"
-"MeanOfTimeBodyGyroscopeJerkStandardDeviationZ"
-"MeanOfTimeBodyAccelerometerMagnitudeMean"
-"MeanOfTimeBodyAccelerometerMagnitudeStandardDeviation"
-"MeanOfTimeGravityAccelerometerMagnitudeMean"
-"MeanOfTimeGravityAccelerometerMagnitudeStandardDeviation"
-"MeanOfTimeBodyAccelerometerJerkMagnitudeMean"
-"MeanOfTimeBodyAccelerometerJerkMagnitudeStandardDeviation"
-"MeanOfTimeBodyGyroscopeMagnitudeMean"
-"MeanOfTimeBodyGyroscopeMagnitudeStandardDeviation"
-"MeanOfTimeBodyGyroscopeJerkMagnitudeMean"
-"MeanOfTimeBodyGyroscopeJerkMagnitudeStandardDeviation"
-"MeanOfFrequencyBodyAccelerometerMeanX"
-"MeanOfFrequencyBodyAccelerometerMeanY"
-"MeanOfFrequencyBodyAccelerometerMeanZ"
-"MeanOfFrequencyBodyAccelerometerStandardDeviationX"
-"MeanOfFrequencyBodyAccelerometerStandardDeviationY"
-"MeanOfFrequencyBodyAccelerometerStandardDeviationZ"
-"MeanOfFrequencyBodyAccelerometerMeanFreqX"
-"MeanOfFrequencyBodyAccelerometerMeanFreqY"
-"MeanOfFrequencyBodyAccelerometerMeanFreqZ"
-"MeanOfFrequencyBodyAccelerometerJerkMeanX"
-"MeanOfFrequencyBodyAccelerometerJerkMeanY"
-"MeanOfFrequencyBodyAccelerometerJerkMeanZ"
-"MeanOfFrequencyBodyAccelerometerJerkStandardDeviationX"
-"MeanOfFrequencyBodyAccelerometerJerkStandardDeviationY"
-"MeanOfFrequencyBodyAccelerometerJerkStandardDeviationZ"
-"MeanOfFrequencyBodyAccelerometerJerkMeanFreqX"
-"MeanOfFrequencyBodyAccelerometerJerkMeanFreqY"
-"MeanOfFrequencyBodyAccelerometerJerkMeanFreqZ"
-"MeanOfFrequencyBodyGyroscopeMeanX"
-"MeanOfFrequencyBodyGyroscopeMeanY"
-"MeanOfFrequencyBodyGyroscopeMeanZ"
-"MeanOfFrequencyBodyGyroscopeStandardDeviationX"
-"MeanOfFrequencyBodyGyroscopeStandardDeviationY"
-"MeanOfFrequencyBodyGyroscopeStandardDeviationZ"
-"MeanOfFrequencyBodyGyroscopeMeanFreqX"
-"MeanOfFrequencyBodyGyroscopeMeanFreqY"
-"MeanOfFrequencyBodyGyroscopeMeanFreqZ"
-"MeanOfFrequencyBodyAccelerometerMagnitudeMean"
-"MeanOfFrequencyBodyAccelerometerMagnitudeStandardDeviation"
-"MeanOfFrequencyBodyAccelerometerMagnitudeMeanFreq"
-"MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeMean"
-"MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation"
-"MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeMeanFreq"
-"MeanOfFrequencyBodyBodyGyroscopeMagnitudeMean"
-"MeanOfFrequencyBodyBodyGyroscopeMagnitudeStandardDeviation"
-"MeanOfFrequencyBodyBodyGyroscopeMagnitudeMeanFreq"
-"MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeMean"
-"MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation"
-"MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeMeanFreq"
-"MeanOfangletBodyAccelerometerMeanGravity"
-"MeanOfangletBodyAccelerometerJerkMeanGravityMean"
-"MeanOfangletBodyGyroscopeMeanGravityMean"
-"MeanOfangletBodyGyroscopeJerkMeanGravityMean"
-"MeanOfangleXGravityMean"
-"MeanOfangleYGravityMean"
-"MeanOfangleZGravityMean"
+| variable | value(s) |
+| -------- | ----- |
+|GroupedByActivity|WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING|
+|GroupedBySubjectID|1,2,3,4,...,30|
+|MeanOfTimeBodyAccelerometerMeanX|numeric|
+|MeanOfTimeBodyAccelerometerMeanY|numeric|
+|MeanOfTimeBodyAccelerometerMeanZ|numeric|
+|MeanOfTimeBodyAccelerometerStandardDeviationX|numeric|
+|MeanOfTimeBodyAccelerometerStandardDeviationY|numeric|
+|MeanOfTimeBodyAccelerometerStandardDeviationZ|numeric|
+|MeanOfTimeGravityAccelerometerMeanX|numeric|
+|MeanOfTimeGravityAccelerometerMeanY|numeric|
+|MeanOfTimeGravityAccelerometerMeanZ|numeric|
+|MeanOfTimeGravityAccelerometerStandardDeviationX|numeric|
+|MeanOfTimeGravityAccelerometerStandardDeviationY|numeric|
+|MeanOfTimeGravityAccelerometerStandardDeviationZ|numeric|
+|MeanOfTimeBodyAccelerometerJerkMeanX|numeric|
+|MeanOfTimeBodyAccelerometerJerkMeanY|numeric|
+|MeanOfTimeBodyAccelerometerJerkMeanZ|numeric|
+|MeanOfTimeBodyAccelerometerJerkStandardDeviationX|numeric|
+|MeanOfTimeBodyAccelerometerJerkStandardDeviationY|numeric|
+|MeanOfTimeBodyAccelerometerJerkStandardDeviationZ|numeric|
+|MeanOfTimeBodyGyroscopeMeanX|numeric|
+|MeanOfTimeBodyGyroscopeMeanY|numeric|
+|MeanOfTimeBodyGyroscopeMeanZ|numeric|
+|MeanOfTimeBodyGyroscopeStandardDeviationX|numeric|
+|MeanOfTimeBodyGyroscopeStandardDeviationY|numeric|
+|MeanOfTimeBodyGyroscopeStandardDeviationZ|numeric|
+|MeanOfTimeBodyGyroscopeJerkMeanX|numeric|
+|MeanOfTimeBodyGyroscopeJerkMeanY|numeric|
+|MeanOfTimeBodyGyroscopeJerkMeanZ|numeric|
+|MeanOfTimeBodyGyroscopeJerkStandardDeviationX|numeric|
+|MeanOfTimeBodyGyroscopeJerkStandardDeviationY|numeric|
+|MeanOfTimeBodyGyroscopeJerkStandardDeviationZ|numeric|
+|MeanOfTimeBodyAccelerometerMagnitudeMean|numeric|
+|MeanOfTimeBodyAccelerometerMagnitudeStandardDeviation|numeric|
+|MeanOfTimeGravityAccelerometerMagnitudeMean|numeric|
+|MeanOfTimeGravityAccelerometerMagnitudeStandardDeviation|numeric|
+|MeanOfTimeBodyAccelerometerJerkMagnitudeMean|numeric|
+|MeanOfTimeBodyAccelerometerJerkMagnitudeStandardDeviation|numeric|
+|MeanOfTimeBodyGyroscopeMagnitudeMean|numeric|
+|MeanOfTimeBodyGyroscopeMagnitudeStandardDeviation|numeric|
+|MeanOfTimeBodyGyroscopeJerkMagnitudeMean|numeric|
+|MeanOfTimeBodyGyroscopeJerkMagnitudeStandardDeviation|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanX|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanY|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanZ|numeric|
+|MeanOfFrequencyBodyAccelerometerStandardDeviationX|numeric|
+|MeanOfFrequencyBodyAccelerometerStandardDeviationY|numeric|
+|MeanOfFrequencyBodyAccelerometerStandardDeviationZ|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanFreqX|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanFreqY|numeric|
+|MeanOfFrequencyBodyAccelerometerMeanFreqZ|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanX|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanY|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanZ|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkStandardDeviationX|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkStandardDeviationY|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkStandardDeviationZ|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanFreqX|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanFreqY|numeric|
+|MeanOfFrequencyBodyAccelerometerJerkMeanFreqZ|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanX|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanY|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanZ|numeric|
+|MeanOfFrequencyBodyGyroscopeStandardDeviationX|numeric|
+|MeanOfFrequencyBodyGyroscopeStandardDeviationY|numeric|
+|MeanOfFrequencyBodyGyroscopeStandardDeviationZ|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanFreqX|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanFreqY|numeric|
+|MeanOfFrequencyBodyGyroscopeMeanFreqZ|numeric|
+|MeanOfFrequencyBodyAccelerometerMagnitudeMean|numeric|
+|MeanOfFrequencyBodyAccelerometerMagnitudeStandardDeviation|numeric|
+|MeanOfFrequencyBodyAccelerometerMagnitudeMeanFreq|numeric|
+|MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeMean|numeric|
+|MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation|numeric|
+|MeanOfFrequencyBodyBodyAccelerometerJerkMagnitudeMeanFreq|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeMagnitudeMean|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeMagnitudeStandardDeviation|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeMagnitudeMeanFreq|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeMean|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation|numeric|
+|MeanOfFrequencyBodyBodyGyroscopeJerkMagnitudeMeanFreq|numeric|
+|MeanOfangletBodyAccelerometerMeanGravity|numeric|
+|MeanOfangletBodyAccelerometerJerkMeanGravityMean|numeric|
+|MeanOfangletBodyGyroscopeMeanGravityMean|numeric|
+|MeanOfangletBodyGyroscopeJerkMeanGravityMean|numeric|
+|MeanOfangleXGravityMean|numeric|
+|MeanOfangleYGravityMean|numeric|
+|MeanOfangleZGravityMean|numeric|
